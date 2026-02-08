@@ -6,7 +6,7 @@
 /*   By: abdelahm <abdelahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:26:34 by abdelahm          #+#    #+#             */
-/*   Updated: 2026/02/08 17:14:08 by abdelahm         ###   ########.fr       */
+/*   Updated: 2026/02/08 17:59:49 by abdelahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*read_and_store(int fd, char *stash);
 char	*find_char(char *str, int c);
 char	*join_strings(char *stash, char *buffer, size_t i, size_t j);
 char	*clear_stash(char *stash);
-size_t	str_length(char *str);
+size_t	ft_strlen(char *str);
 char	*extract_line(char *stash);
 char	*update_stash(char *stash);
 

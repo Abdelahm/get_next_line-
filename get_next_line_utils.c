@@ -6,7 +6,7 @@
 /*   By: abdelahm <abdelahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:26:41 by abdelahm          #+#    #+#             */
-/*   Updated: 2026/02/08 17:09:38 by abdelahm         ###   ########.fr       */
+/*   Updated: 2026/02/08 17:59:24 by abdelahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*clear_stash(char *stash)
 	return (NULL);
 }
 
-size_t	str_length(char *str)
+size_t	ft_strlen(char *str)
 {
 	size_t	index;
 
@@ -38,7 +38,7 @@ char	*find_char(char *str, int c)
 	if (!str)
 		return (0);
 	if (c == '\0')
-		return ((char *)&str[str_length(str)]);
+		return ((char *)&str[ft_strlen(str)]);
 	while (str[index] != '\0')
 	{
 		if (str[index] == (char)c)
@@ -60,7 +60,7 @@ char	*join_strings(char *stash, char *buffer, size_t i, size_t j)
 	if (!stash || !buffer)
 		return (clear_stash(stash));
 	joined = malloc(sizeof(char)
-			* (str_length(stash) + str_length(buffer) + 1));
+			* (ft_strlen(stash) + ft_strlen(buffer) + 1));
 	if (!joined)
 		return (clear_stash(stash));
 	if (stash)
@@ -68,7 +68,7 @@ char	*join_strings(char *stash, char *buffer, size_t i, size_t j)
 			joined[i] = stash[i];
 	while (buffer[j] != '\0')
 		joined[i++] = buffer[j++];
-	joined[str_length(stash) + str_length(buffer)] = '\0';
+	joined[ft_strlen(stash) + ft_strlen(buffer)] = '\0';
 	free(stash);
 	return (joined);
 }

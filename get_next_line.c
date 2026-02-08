@@ -6,7 +6,7 @@
 /*   By: abdelahm <abdelahm@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/27 17:26:38 by abdelahm          #+#    #+#             */
-/*   Updated: 2026/02/08 17:38:33 by abdelahm         ###   ########.fr       */
+/*   Updated: 2026/02/08 17:59:41 by abdelahm         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ char	*update_stash(char *stash)
 		free(stash);
 		return (NULL);
 	}
-	new_stash = (char *)malloc(sizeof(char) * (str_length(stash) - index + 1));
+	new_stash = (char *)malloc(sizeof(char) * (ft_strlen(stash) - index + 1));
 	if (!new_stash)
 		return (NULL);
 	index++;
